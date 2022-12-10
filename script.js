@@ -160,7 +160,7 @@ function playerGuess(letter, player) {
 
 function isValid(letter) {
     let isValidLetter = true
-    if (!letter.match('^[a-z]$')) {
+    if (!letter.match('^[a-zA-Z]$')) {
         //handling unexpected inputs--not letters
         alert('Not a letter');
         isValidLetter = false
