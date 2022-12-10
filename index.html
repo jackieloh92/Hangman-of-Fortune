@@ -1,0 +1,89 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+
+    <div id="startButton" style="display: block">
+        <img src="hangman.jpg"></img>
+        <h1>Boxes of Fortune!</h1>
+        <h2>Hangman reimagined</h1>
+            <button onclick="start()" class="button">Start</button>
+
+    </div>
+
+    <div id="mainGame" style="display: none">
+
+        <p id="question" style="font-size: 36px"></p>
+        <input type="text" id="guess" style="display: none">
+        <div id="container1" class="container" onclick="pickBox()"
+            onmouseover="PlaySound('mixkit-arcade-game-jump-coin-216.wav')">
+            <div id="square1" class="box">?</div>
+            <div id="square2" class="box">?</div>
+            <div id="square3" class="box">?</div>
+            <div id="square4" class="box">?</div>
+        </div>
+        <div>
+            <button class="button" onclick="enterGuess()" onmouseover="PlaySound('buttonclick.wav')">Enter
+                Guess</button>
+        </div>
+        <div><br></div>
+        <div>
+            <button class="button" onclick="enterFull()" onmouseover="PlaySound('buttonclick.wav')">Solve the Puzzle
+                now</button>
+        </div>
+        <div><br></div>
+        <div>
+            <button class="button" onclick="restart()" onmouseover="PlaySound('buttonclick.wav')">Restart game</button>
+        </div>
+    </div>
+    <div><br></div>
+
+    </div>
+    <div>
+        <h3 id="playerTurn"></h3>
+    </div>
+    <div id="RRguess" style="display: block">
+
+        <p id="rightGuess" class="rightGuess"></p>
+        <p id="wrongGuess" font-size="18px"></p>
+        <p id="guessesLeft"></p>
+        <div id="1wallet" style="width: 20%; float:left">
+            <p id="wallet"></p>
+        </div>
+
+        <div id="2wallet" style="width: 20%; float:right">
+            <p id="wallet"></p>
+        </div>
+
+
+    </div>
+
+    <div id="youWin" style="display: none">
+
+        <h1>You Win</h1>
+        <h2 id="whoWon"></h2>
+        <h2 id="correctWordWas"></h2>
+        <br>
+        <br>
+        <div>
+            <button class="button" id="restartButton" onclick="restart()"
+                onmouseover="PlaySound('buttonclick.wav')">Play
+                again?</button>
+        </div>
+        <div><br></div>
+        <div>
+            <button class="button" id="resetButton" onclick="reset()" onmouseover="PlaySound('buttonclick.wav')">Reset
+                all
+                money</button>
+        </div>
+
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
