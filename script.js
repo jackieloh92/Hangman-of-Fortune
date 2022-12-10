@@ -184,7 +184,7 @@ function enterGuess() {
         changePlayer()
         appendBox();
     } else {
-        const letter = prompt("What is your guess?");
+        const letter = prompt("What is your guess?").toLowerCase()
         if (letter === null) {
             changePlayer();
             appendBox();
@@ -201,7 +201,6 @@ function isRightOrNot(a) {
 
 function correctLetter(letter) {
     let count = 0;
-
     while (count <= word.length - 1) {
         if (letter === word[count]) {
             wordGuess[count] = letter;
